@@ -28,3 +28,9 @@ jobs:
         run: |
           ./bootstrap.sh --with-libraries=signals,regex,thread,date_time --with-toolset=gcc
           ./b2 -j3 stage
+
+      - name: upload binaries
+        uses: actions/upload-artifact@v4
+        with:
+          name: binaries
+          path: stage
