@@ -32,5 +32,5 @@ jobs:
       - name: upload binaries
         uses: actions/upload-artifact@v4
         with:
-          name: binaries
+          name: binaries-${{matrix.os}}
           path: stage
