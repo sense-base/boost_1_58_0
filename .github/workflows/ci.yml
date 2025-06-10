@@ -9,7 +9,7 @@ on:
       - '**'
 
 permissions:
-  actions: read|write|none
+  actions: write
 
 jobs:
   b2-posix:
