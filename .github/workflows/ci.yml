@@ -40,4 +40,4 @@ jobs:
         uses: softprops/action-gh-release@da05d552573ad5aba039eaac05058a918a7bf631
         if: github.ref_type == 'tag'
         with:
-          files: stage/lib/libboost_thread.so.1.58.0
+          files: stage/lib/libboost*
