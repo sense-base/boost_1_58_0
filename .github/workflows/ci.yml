@@ -8,8 +8,7 @@ on:
     tags:
       - '**'
 
-permissions:
-  actions: write
+permissions: write-all
 
 jobs:
   b2-posix:
@@ -18,7 +17,7 @@ jobs:
       matrix:
         include:
           - os: ubuntu-22.04
-          - os: ubuntu-24.04
+	    #          - os: ubuntu-24.04
 
     runs-on: ${{matrix.os}}
 
@@ -42,4 +41,4 @@ jobs:
         uses: softprops/action-gh-release@v2
         if: github.ref_type == 'tag'
         with:
-          files: lib/libboost*
+          files: stage/lib/libboost*
